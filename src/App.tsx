@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { User } from './components/state/User';
+import { Counter } from './components/state/Counter';
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-        <User/>
+        <Counter/>
     </div>
   );
 }
