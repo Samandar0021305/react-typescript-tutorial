@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Counter } from './components/state/Counter';
-
+import { Box } from './components/context/Box';
+import { THemeCOntextProvider } from './components/context/ThemeContext';
 function App() {
 
   // const personName= {
@@ -27,7 +27,9 @@ function App() {
 
   return (
     <div className="App">
-        <Counter/>
+        <THemeCOntextProvider>
+          <Box/>
+        </THemeCOntextProvider>
     </div>
   );
 }
