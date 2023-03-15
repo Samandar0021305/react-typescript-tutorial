@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Button } from './components/Button';
+import { Container } from './components/Container';
 import { Input } from './components/Input';
 
 function App() {
@@ -28,12 +29,7 @@ function App() {
 
   return (
     <div className="App">
-          <Button handleClick={(event)=>{
-            console.log("hello world",event);
-            
-          }}/>     
-
-          <Input value='' handleChange={(event)=>console.log(event)} />
+          <Container styles={{border:"1px solid red", padding:"1rem"}} />
     </div>
   );
 }
