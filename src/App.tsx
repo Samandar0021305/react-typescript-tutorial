@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Button } from './components/Button';
-import { Container } from './components/Container';
-import { Input } from './components/Input';
+import { User } from './components/state/User';
 
 function App() {
 
@@ -29,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-          <Container styles={{border:"1px solid red", padding:"1rem"}} />
+        <User/>
     </div>
   );
 }
