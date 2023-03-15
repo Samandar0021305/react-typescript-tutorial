@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { Button } from './components/Button';
+import { Input } from './components/Input';
 
 function App() {
 
@@ -26,7 +28,12 @@ function App() {
 
   return (
     <div className="App">
-               
+          <Button handleClick={(event)=>{
+            console.log("hello world",event);
+            
+          }}/>     
+
+          <Input value='' handleChange={(event)=>console.log(event)} />
     </div>
   );
 }
