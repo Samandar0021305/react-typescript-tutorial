@@ -5,20 +5,27 @@ type IniatlStateType ={
 } 
 
 type ActionType = {
-    type:string,
+    type:'inc' | 'dec',
     payload:number
 }
+
+type resteAction = {
+    type:"res"
+}
+type upditeActons = ActionType | resteAction
 
 const initalState = {
     count:0
 }
 
-function reducer(state:IniatlStateType,action:ActionType){
+function reducer(state:IniatlStateType,action:upditeActons){
   switch(action.type){
     case "inc":
         return {count:state.count + action.payload};
     case 'dec':
         return {count:state.count - action.payload};
+    case 'res':
+        return initalState
     default :
     return state
   }
@@ -32,6 +39,7 @@ export const Counter = () => {
         <h1>count - {counter.count}</h1>
         <button onClick={()=>dispatch({type:"inc",payload:10})}>increment</button>
         <button onClick={()=>dispatch({type:"dec",payload:10})}>decrement</button>
+        <button onClick={()=>dispatch({type:'res'})}>reset</button>
     </div>
   )
 }
