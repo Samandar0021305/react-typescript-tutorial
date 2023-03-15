@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Counter } from './components/class/Counter';
 import { Box } from './components/context/Box';
 import { THemeCOntextProvider } from './components/context/ThemeContext';
 function App() {
@@ -27,9 +28,7 @@ function App() {
 
   return (
     <div className="App">
-        <THemeCOntextProvider>
-          <Box/>
-        </THemeCOntextProvider>
+        <Counter message='welcome to my channel'/>
     </div>
   );
 }
